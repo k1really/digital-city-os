@@ -1,12 +1,7 @@
 {
-  "watch": [
-    "src"
-  ],
+  "watch": ["src"],
   "ext": "ts",
-  "ignore": [
-    "node_modules",
-    "dist"
-  ],
+  "ignore": ["node_modules", "dist"],
   "delay": 500,
   "env": {
     "NODE_ENV": "development"

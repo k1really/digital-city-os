@@ -6,7 +6,11 @@ import { useEffect } from 'react';
 
 const CityScene = dynamic(() => import('@/3d/CityScene').then((m) => ({ default: m.CityScene })), {
   ssr: false,
-  loading: () => <div className="w-full h-full flex items-center justify-center bg-cyberpunk-950">Loading scene...</div>,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-cyberpunk-950">
+      Loading scene...
+    </div>
+  ),
 });
 
 export default function Home() {
@@ -35,7 +39,10 @@ export default function Home() {
               <p className="text-sm text-gray-300">
                 Connected: <span className="text-green-500">{isPaused ? 'Ready' : 'Running'}</span>
               </p>
-              <p className="text-sm text-gray-300">Simulation: <span className="text-yellow-500">{isPaused ? 'Paused' : 'Active'}</span></p>
+              <p className="text-sm text-gray-300">
+                Simulation:{' '}
+                <span className="text-yellow-500">{isPaused ? 'Paused' : 'Active'}</span>
+              </p>
             </div>
 
             <button

@@ -8,7 +8,14 @@ function Scene() {
       <color attach="background" args={['#050810']} />
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 10]} intensity={1} />
-      <Grid args={[100, 100]} cellSize={1} cellColor={'#6f7280'} sectionSize={10} sectionColor={'#ef4444'} fadeStrength={0.5} />
+      <Grid
+        args={[100, 100]}
+        cellSize={1}
+        cellColor={'#6f7280'}
+        sectionSize={10}
+        sectionColor={'#ef4444'}
+        fadeStrength={0.5}
+      />
       <OrbitControls makeDefault />
     </>
   );

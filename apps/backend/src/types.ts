@@ -3,7 +3,15 @@ export interface District {
   name: string;
   x: number;
   y: number;
-  type: 'residential' | 'industrial' | 'commercial' | 'elite' | 'slums' | 'suburbs' | 'tech' | 'financial';
+  type:
+    | 'residential'
+    | 'industrial'
+    | 'commercial'
+    | 'elite'
+    | 'slums'
+    | 'suburbs'
+    | 'tech'
+    | 'financial';
   population: number;
   wealth: number;
   crime: number;
