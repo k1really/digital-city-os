@@ -1,0 +1,15 @@
+# Digital City OS Code Owners
+
+# Default reviewers
+* @kiryl-zahubenka
+
+# Frontend
+/apps/frontend/ @kiryl-zahubenka
+
+# Backend
+/apps/backend/ @kiryl-zahubenka
+
+# Shared config
+/.github/ @kiryl-zahubenka
+/package.json @kiryl-zahubenka
+/tsconfig.json @kiryl-zahubenka
