@@ -7,6 +7,10 @@ yarn-error.log
 dist/
 build/
 *.tsbuildinfo
+*.d.ts
+*.d.ts.map
+*.js
+*.js.map
 
 # Next.js
 .next/
