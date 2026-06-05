@@ -16,7 +16,7 @@ Digital City OS is **not** a city builder. It's an operating system for a living
 
 Monorepo with two main applications:
 
-```
+```txt
 digital-city-os/
 ├── apps/
 │   ├── frontend/          # Next.js + React + Three.js UI

@@ -32,6 +32,6 @@ Open [http://localhost:3000](http://localhost:3000)
 
 Create `.env.local`:
 
-```
+```env
 NEXT_PUBLIC_API_URL=http://localhost:3001
 ```

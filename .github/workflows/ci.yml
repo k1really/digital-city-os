@@ -15,10 +15,10 @@ jobs:
         node-version: [ 18.x ]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -47,7 +47,7 @@ jobs:
     if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Deploy frontend to Vercel (staging)
       uses: vercel/action@master
@@ -57,7 +57,6 @@ jobs:
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_FRONTEND }}
         scope: ${{ secrets.VERCEL_ORG_ID }}
         working-directory: ./apps/frontend
-      continue-on-error: true
 
   deploy-production:
     needs: lint-and-test
@@ -65,7 +64,7 @@ jobs:
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Deploy frontend to Vercel (production)
       uses: vercel/action@master
@@ -76,4 +75,3 @@ jobs:
         vercel-args: --prod
         scope: ${{ secrets.VERCEL_ORG_ID }}
         working-directory: ./apps/frontend
-      continue-on-error: true

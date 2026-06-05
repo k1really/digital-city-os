@@ -33,7 +33,7 @@ Server runs on [http://localhost:3001](http://localhost:3001)
 
 Create `.env`:
 
-```
+```env
 NODE_ENV=development
 PORT=3001
 DB_URL=postgresql://user:password@localhost:5432/digital_city_os

@@ -840,7 +840,7 @@ Tag and release MVP version. Publish to repository.
 
 ## Task Dependency Graph Summary
 
-```
+```txt
 T1.1 (Setup)
 ├── T1.2 (Frontend Setup)
 │   ├── T1.4 (WebSocket) → T2.1, T2.2, T2.3, etc.
