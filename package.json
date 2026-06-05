@@ -19,10 +19,12 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ],
     "*.{json,md}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   },
   "devDependencies": {
