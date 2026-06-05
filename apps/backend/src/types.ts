@@ -21,6 +21,23 @@ export interface District {
   traffic_density: number;
 }
 
+export interface Personality {
+  openness: number; // 0-100
+  conscientiousness: number;
+  extraversion: number;
+  agreeableness: number;
+  neuroticism: number;
+  risk_tolerance: number;
+  political_alignment: number; // -100 (left) to 100 (right)
+}
+
+export interface CitizenState {
+  location: 'home' | 'work' | 'transit' | 'public';
+  current_activity: string;
+  is_working: boolean;
+  commute_progress: number; // 0-100
+}
+
 export interface Citizen {
   id: string;
   name: string;
@@ -31,7 +48,20 @@ export interface Citizen {
   income: number;
   stress: number;
   happiness: number;
-  ideology: number;
+  personality: Personality;
+  state: CitizenState;
+  needs?: {
+    hunger: number;
+    tiredness: number;
+    social_need: number;
+    work_motivation: number;
+    safety: number;
+    entertainment: number;
+  };
+  memory: string[]; // recent events
+  last_action?: string;
+  created_at: Date;
+  last_updated: Date;
 }
 
 export interface SimulationEvent {

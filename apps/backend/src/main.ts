@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import { cityRoutes } from './routes/city.js';
+import { citizenRoutes } from './routes/citizens.js';
 
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const HOST = process.env.HOST || '0.0.0.0';
@@ -25,6 +26,7 @@ app.get('/health', async () => ({
 
 // Register route groups
 app.register(cityRoutes);
+app.register(citizenRoutes);
 
 // Start server
 const start = async () => {
