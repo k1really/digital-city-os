@@ -1,1 +1,1 @@
-console.log('Digital City OS Backend starting...');
+// Backend entry point
